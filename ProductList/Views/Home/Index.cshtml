@@ -1,0 +1,78 @@
+﻿<h3>S1L09 Session 09 <br />Adapting the website</h3>
+<hr />
+
+<div>
+    <table>
+        <tr>
+            <td class="col-5">
+                <img src="~/Content/images/Student_Picture.png" alt="My Photo" style="width: 150px; height: 150px;" />
+            </td>
+            <td class="col-7">
+                <h5>Name: Sibongamandla Khanya</h5>
+                <h5>Surname: Mnyandu</h5>
+                <h5>Student Number: u21566098</h5>
+            </td>
+        </tr>
+    </table>
+</div>
+<hr />
+
+<div style="max-height: 450px; overflow-y: auto;">
+    <p>
+        Please find down below a concise sequence of steps I have used to update
+        this project based on the stipulated requiremnts specified to me in the assignment task.
+    </p>
+
+    <h3>HomeController Index.cshtml Update</h3>
+    <ul>
+        <li>Removed existing text content: Removed any previous content or placeholders from the HomeController's Index view.</li>
+        <li>Added a table to contain student details: Introduced a table structure to organize and display student information.</li>
+        <li>Column 1 contains the photo of myself: Utilized an <img> tag to display a photo of the student in the first column of the table.</li>
+        <li>Column 2 contains my student details (Name, Surname, Student Number): Populated the second column of the table with student details such as name, surname, and student number.</li>
+    </ul>
+
+    <h3>Adapted stipulated requirements:</h3>
+    <ul>
+        <li>Controller Adaptation: Updated the ProductController.cs file to accommodate new model properties, actions, and data manipulation logic.</li>
+        <li>View Adaptation: Modified the Product/Index.cshtml view to incorporate new form controls, display dynamic data, and interact with user inputs.l</li>
+        <li>Models Adaptation: 
+            <ul>
+                <li>Updated Category.cs: Extended the Category model with additional properties or methods as required by the project's specifications.</li>
+                <li>Updated Product.cs: Enhanced the Product model to include new attributes or behaviors necessary for the application's functionality.</li>
+                <li>Updated ProductRepository.cs: Adjusted the repository methods to handle data retrieval, storage, and manipulation based on updated requirements.</li>
+                <li>Updated ProductViewModel.cs: Expanded the ProductViewModel to include new properties or methods needed to support the view's functionality.</li>
+                <li>Created new model: Supplier.cs: Introduced a new Supplier model to represent entities related to product suppliers, including relevant attributes and relationships.</li>
+            </ul> 
+        </li>
+    </ul>
+
+    <h3>Other Changes:</h3>
+    <ul>
+        <li>Added jQuery code: Implemented jQuery functions to enable dynamic interaction with HTML elements, such as adding and removing items from a list.</li>
+        <li>Form input management: Implemented logic to enable/disable form inputs based on user actions, ensuring a smoother user experience and preventing unwanted interactions.</li>
+        <li>View layout and styling: Updated the layout and styling of the Product/Index.cshtml view to improve readability, visual appeal, and user-friendliness.</li>
+        <li>Data binding and functionality: Ensured proper data binding between the view and model, enabling seamless interaction and functionality for dropdowns, text inputs, and buttons.</li>
+        <li>User interaction handling: Implemented logic to handle user interactions, such as selecting dropdown options, entering text in input fields, and clicking buttons, to trigger appropriate actions and update the view dynamically.</li>
+    </ul>
+
+    <p>
+        These changes collectively enhance the project by incorporating new features, improving usability, and meeting the specified requirements outlined in the assignment task.
+    </p>
+
+    <script type="text/javascript">
+        $(document).ready(function () {
+            // Add item to list
+            $("#addItemButton").click(function () {
+                var itemText = $("#newItemText").val();
+                var newItem = "<li>" + itemText + "</li>";
+                $("#myList ul").append(newItem);
+            });
+
+            // Remove item from list
+            $("#removeItemButton").click(function () {
+                $("#myList ul li:last-child").remove();
+            });
+        });
+    </script>
+
+</div>
